@@ -1,0 +1,38 @@
+.body {
+  margin: 0px;
+}
+.background_container {
+  background-color: #0f172a;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0px;
+}
+@media (max-width: 768px) {
+  .super_over_league_heading {
+    font-family: "Roboto";
+    color: #f8fafc;
+    font-size: 28px;
+  }
+  .image {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  .super_over_league_heading {
+    font-family: "Roboto";
+    color: #f8fafc;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .image {
+    height: 300px;
+    width: 300px;
+  }
+}
