@@ -1,0 +1,91 @@
+/* Write your code here. */
+* {
+  margin: 0px;
+  text-align: center;
+}
+.background_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://assets.ccbp.in/frontend/react-js/social-buttons-bg.png");
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .Like {
+    border-radius: 10px;
+    background-color: #eab308;
+    width: 60px;
+    height: 60px;
+    font-family: "Roboto";
+    font-size: 18px;
+  }
+  .Comment {
+    border-radius: 10px;
+    background-color: #ffff;
+    width: 60px;
+    height: 60px;
+    font-family: "Roboto";
+    font-size: 18px;
+  }
+  .Share {
+    border-radius: 10px;
+    background-color: #1d4ed8;
+    width: 60px;
+    height: 60px;
+    font-family: "Roboto";
+    font-size: 18px;
+  }
+  .social_button_heading {
+    font-family: "Bree Serif";
+    font-size: 25px;
+    font-weight: bold
+    color:white;
+  }
+  .Button_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Like {
+    border-radius: 10px;
+    background-color: #eab308;
+    width: 100px;
+    height: 50px;
+    font-family: "Roboto";
+    font-size: 20px;
+  }
+  .Comment {
+    border-radius: 10px;
+    background-color: #ffff;
+    width: 100px;
+    height: 50px;
+    font-family: "Roboto";
+    font-size: 20px;
+  }
+  .Share {
+    border-radius: 10px;
+    background-color: #1d4ed8;
+    width: 100px;
+    height: 50px;
+    font-family: "Roboto";
+    font-size: 20px;
+  }
+  .social_button_heading {
+    font-family: "Bree Serif";
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+  }
+  .Button_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
