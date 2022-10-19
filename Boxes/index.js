@@ -1,23 +1,22 @@
-const Box = (props) => {
-  //  Write your code here.
-  const { name } = props;
+const Box = props => {
+  const {text, className} = props
+  
   return (
-    <div className={`${name}`}>
-      <p>{name}</p>
+    <div className={`box ${className}`}>
+      <p className="box-title">{text}</p>
     </div>
-  );
-};
+  )
+}
 
 const element = (
-  //  Write your code here.
-  <div className="bg_container">
-    <h1 className="box_heading">Boxes</h1>
-    <div className="box_container">
-      <Box name="Small" />
-      <Box name="Medium" />
-      <Box name="Large" />
+  <div className="boxes-app-container">
+    <h1 className="heading">Boxes</h1>
+    <div className="boxes-container">
+      <Box text="Small" className="small-box" />
+      <Box text="Medium" className="medium-box" />
+      <Box text="Large" className="large-box" />
     </div>
   </div>
-);
+)
 
-ReactDOM.render(element, document.getElementById("root"));
+ReactDOM.render(element, document.getElementById('root'))
