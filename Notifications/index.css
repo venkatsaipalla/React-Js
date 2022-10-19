@@ -1,77 +1,92 @@
-/* Write your code here. */
 * {
-  margin: 0px;
-  text-align: center;
-  color: white;
+  box-sizing: border-box;
 }
-.background_container {
+
+body {
+  margin: 0;
+}
+
+.notifications-app-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
+  min-height: 100vh;
 }
-.notification {
-  font-weight: bold;
-  font-family: "Roboto";
+
+.title {
   color: #0f172a;
+  font-family: 'Roboto';
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 48px;
 }
-.note {
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+.notifications-list-container {
   display: flex;
-  flex-direction: row;
-  justify-content: start;
+  flex-direction: column;
+  width: 80%;
+  max-width: 500px;
+}
+
+@media screen and (min-width: 768px) {
+  .notifications-list-container {
+    width: 60%;
+  }
+}
+
+.notification-container {
+  display: flex;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 4px;
+  margin-bottom: 32px;
+  padding-top: 12px;
+  padding-right: 8px;
+  padding-bottom: 12px;
+  padding-left: 18px;
 }
-.information {
+
+@media screen and (min-width: 768px) {
+  .notification-container {
+    margin-bottom: 48px;
+    padding-top: 16px;
+    padding-right: 12px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+  }
+}
+
+.primary-bg-color {
   background-color: #0b69ff;
-  width: 150px;
-  padding: 10px;
-  color: white;
 }
-.success {
+
+.success-bg-color {
   background-color: #2dca73;
-  width: 150px;
-  padding: 10px;
-  color: white;
 }
-.warning {
+
+.warning-bg-color {
   background-color: #ffb800;
-  width: 150px;
-  padding: 10px;
-  color: white;
 }
-.error {
+
+.danger-bg-color {
   background-color: #ff0b37;
-  width: 150px;
-  padding: 10px;
-  color: white;
 }
-@media screen and (max-width: 576px) {
-  .notification {
-    font-size: 28px;
-  }
-  .icon {
-    width: 50px;
-    height: 50px;
-  }
-  .text {
-    font-family: "Roboto";
-    font-size: 20px;
-  }
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
 }
-@media screen and (min-width: 576px) {
-  .notification {
-    font-size: 34px;
-  }
-  .icon {
-    width: 55px;
-    height: 55px;
-  }
-  .text {
-    font-family: "Roboto";
-    font-size: 25px;
-  }
+
+.message {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
 }
