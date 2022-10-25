@@ -9,6 +9,6 @@
 - State
   - setState()
   
-  # live Link : https://venkatpcounter.ccbp.tech/
+  # Live Link : https://venkatpcounter.ccbp.tech/
   
   ![alt-text](https://res.cloudinary.com/dxejhgtqt/image/upload/v1666549711/screen-capture_bdfklu.gif)
