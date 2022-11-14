@@ -1,0 +1,31 @@
+/* Write your CSS here */
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+.box {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
+  padding: 20px;
+}
+.Day {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 26px;
+}
+.night {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 26px;
+}
+.button {
+  color: black;
+  padding: 20px;
+}
