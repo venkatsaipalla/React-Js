@@ -1,0 +1,23 @@
+/* Write your CSS here */
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info {
+  font-size: 16px;
+  font-family: 'Roboto';
+  color: black;
+}
+.button {
+  width: 120px;
+  height: 40px;
+  background-color: transparent;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 3px;
+  color: #ff0b37;
+  border-color: #ff0b37;
+  cursor: pointer;
+  outline: none;
+}

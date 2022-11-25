@@ -1,0 +1,31 @@
+/* Write your CSS here */
+.bg {
+  border: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffc2a0;
+  height: 100vh;
+}
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border-style: none;
+  background-color: white;
+  width: 80%;
+  padding: 40px;
+}
+.heading {
+  text-align: center;
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 30px;
+  color: #ff8542;
+}
+.listContainer {
+  padding: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
