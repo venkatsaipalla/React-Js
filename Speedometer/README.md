@@ -1,4 +1,4 @@
-In this project, let's build a **Speedometer** by applying the concepts we have learned till now.
+In this project, i build a **Speedometer** by applying the react concepts.
 
 ### Refer to the image below:
 
