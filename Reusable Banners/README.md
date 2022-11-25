@@ -1,4 +1,4 @@
-In this project, let's build **Reusable Banners** by applying the concepts we have learned till now.
+In this project, i build **Reusable Banners** by applying the react concepts learned .
 
 ### Refer to the image below:
 
