@@ -1,4 +1,4 @@
-In this project, let's build a **Welcome App** by applying the concepts we have learned till now.
+In this project, i build a **Welcome App** by applying the react concepts learned.
 
 ### Refer to the image below:
 
