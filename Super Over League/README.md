@@ -1,4 +1,4 @@
-In this project, let's build a **Super Over League** by applying the concepts we have learned till now.
+In this project, i build a **Super Over League** by applying the reacr concepts.
 
 ### Refer to the image below:
 
