@@ -1,0 +1,28 @@
+/* Write your CSS here */
+.bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #93c5fd;
+  height: 100vh;
+}
+.small_div {
+  padding: 40px;
+  background-color: white;
+  border-radius: 8px;
+}
+.inp {
+  padding: 5px;
+  font-family: 'Roboto';
+  color: #000000;
+}
+h1 {
+  color: #000000;
+}
+.country {
+  color: #000000;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
