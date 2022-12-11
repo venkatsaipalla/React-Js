@@ -2,7 +2,7 @@ In this project, is build a **Gallery App** by applying the reactJs concepts.
 
 ### Refer to the image below:
 
-Live Link : https://naturepic.ccbp.tech
+# Live Link : https://naturepic.ccbp.tech
 
 <br/>
 <div style="text-align: center;">
