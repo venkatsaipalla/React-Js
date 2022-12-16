@@ -1,4 +1,4 @@
-In this project, i build a **Capitals App** by applying the reactJs concepts learned till now.
+In this project, I build a **Capitals App** by applying the reactJs concepts learned till now.
 
 # Live Link : https://capitalapp.ccbp.tech/
 
