@@ -1,10 +1,10 @@
-In this project, i build a **Comments App** by applying the concepts of reactJs learned till now.
+In this project, i build an **Appointments App** by applying the concepts of reactJs learned till now.
 
 ### Refer to the image below:
 
 <br/>
 <div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/comments-app-output-v0.gif" alt="comments output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
+    <img src="https://assets.ccbp.in/frontend/content/react-js/appointments-app-output.gif" alt="appointments app output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
 </div>
 <br/>
 
@@ -13,8 +13,8 @@ In this project, i build a **Comments App** by applying the concepts of reactJs 
 <details>
 <summary>Click to view</summary>
 
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/comments-app-sm-output-v2.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/comments-app-lg-output-v0.png)
+- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/appointments-app-sm-output-v2.png)
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/appointments-app-lg-output.png)
 
 </details>
 
@@ -35,16 +35,14 @@ In this project, i build a **Comments App** by applying the concepts of reactJs 
 
 The app must have the following functionalities
 
-- Initially, the list of comments should be zero and the inputs fields should be empty
-- When non-empty values are provided and **Add Comment** button is clicked,
-  - A new comment should be added to the list of comments
-  - The comments count should be incremented by one
-  - The value of the input fields for name and comment should be updated to their initial values
-- When the **Like** button of a comment is clicked, if the image for **Like** is
-  - [Like](https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png) image, then it should be changed to the [Liked](https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png) image
-  - [Liked](https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png) image, then it should be changed to the [Like](https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png) image
-- When the **Delete** button of a comment is clicked, the comment should be deleted from the list of comments and the comments count should be decremented by one
-
+- Initially, the list of appointments should be empty and the title input and date input should be empty
+- When non-empty values are provided for title and date and the **Add** button is clicked,
+  - A new appointment should be added to the list of appointments
+  - The value inside the input elements for title and date should be updated to their initial values
+- When the **Star** on an appointment is clicked, the appointment should be starred
+- The status of the **Starred** filter is updated by clicking on it
+- When the **Starred** filter is active, all the starred appointments should be filtered and displayed
+- When the **Starred** filter is inactive, the list of all appointments should be displayed
 </details>
 
 <details>
@@ -52,7 +50,7 @@ The app must have the following functionalities
 
 <br/>
 <div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/comments-app-component-breakdown-structure-v0.png" alt="component breakdown structure" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
+    <img src="https://assets.ccbp.in/frontend/content/react-js/appointments-app-component-breakdown-structure.png" alt="component structure" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
 </div>
 <br/>
 
@@ -64,10 +62,10 @@ The app must have the following functionalities
 
 Use these files to complete the implementation:
 
-- `src/components/Comments/index.js`
-- `src/components/Comments/index.css`
-- `src/components/CommentItem/index.js`
-- `src/components/CommentItem/index.css`
+- `src/components/Appointments/index.js`
+- `src/components/Appointments/index.css`
+- `src/components/AppointmentItem/index.js`
+- `src/components/AppointmentItem/index.css`
 </details>
 
 ### Quick Tips
@@ -76,13 +74,19 @@ Use these files to complete the implementation:
 <summary>Click to view</summary>
 <br>
 
-- The `formatDistanceToNow` function in the **date-fns** package is used to return the gap between the given date and now in words.
+- The HTML input element with the type `date` is designed for the user to select the date from a date picker
 
-```js
-import {formatDistanceToNow} from 'date-fns'
+  ```jsx
+  <input type="date" />
+  ```
 
-console.log(formatDistanceToNow(new Date())); // less than a minute
-```
+- The `format` function in the date-fns package can be used to get the formatted date string in the given format
+
+  ```jsx
+  import {format} from 'date-fns'
+
+  console.log(format(new Date(2021, 19, 07), 'dd MMMM yyyy, EEEE')) // 19 July 2021, Monday
+  ```
 
 </details>
 
@@ -95,11 +99,9 @@ console.log(formatDistanceToNow(new Date())); // less than a minute
 
 **The following instructions are required for the tests to pass**
 
-- HTML input element for name should have the placeholder as **Your Name**
-- HTML textarea element for comment should have the placeholder as **Your Comment**
-- The **Like** image for each comment should have the alt as **like**
-- The **Delete** button for each comment should have the testid as **delete**
-- To display how much time ago the comment was posted, we will use `formatDistanceToNow` function from **date-fns** package
+- For the `format` function, pass the format string `dd MMMM yyyy, EEEE` as the second argument
+- The star button in each appointment should have the testid as **star**
+- The star image in each appointment should have alt as **star**
 
 </details>
 
@@ -108,10 +110,9 @@ console.log(formatDistanceToNow(new Date())); // less than a minute
 <details>
 <summary>Image URLs</summary>
 
-- [https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png](https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png) alt should be **comments**
-- [https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png](https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png) alt should be **delete**
-- [https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png](https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png)
-- [https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png](https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png)
+- [https://assets.ccbp.in/frontend/react-js/appointments-app/appointments-img.png](https://assets.ccbp.in/frontend/react-js/appointments-app/appointments-img.png) alt should be **appointments**
+- [https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png](https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png)
+- [https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png](https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png)
 
 </details>
 
@@ -120,21 +121,13 @@ console.log(formatDistanceToNow(new Date())); // less than a minute
 
 <br/>
 
-<div style="background-color: #dee0e3; width: 150px; padding: 10px; color: black">Hex: #dee0e3</div>
-<div style="background-color: #1e293b; width: 150px; padding: 10px; color: white">Hex: #1e293b</div>
-<div style="background-color: #475569; width: 150px; padding: 10px; color: white">Hex: #475569</div>
-<div style="background-color: #cbd2d9; width: 150px; padding: 10px; color: black">Hex: #cbd2d9</div>
-<div style="background-color: #0284c7; width: 150px; padding: 10px; color: white">Hex: #0284c7</div>
-<div style="background-color: #f59e0b; width: 150px; padding: 10px; color: black">Hex: #f59e0b</div>
-<div style="background-color: #0b69ff; width: 150px; padding: 10px; color: white">Hex: #0b69ff</div>
-<div style="background-color: #f97316; width: 150px; padding: 10px; color: black">Hex: #f97316</div>
-<div style="background-color: #10b981; width: 150px; padding: 10px; color: black">Hex: #10b981</div>
-<div style="background-color: #b91c1c; width: 150px; padding: 10px; color: black">Hex: #b91c1c</div>
-<div style="background-color: #0ea5e9; width: 150px; padding: 10px; color: white">Hex: #0ea5e9</div>
-<div style="background-color: #334155; width: 150px; padding: 10px; color: white">Hex: #334155</div>
-<div style="background-color: #94a3b8; width: 150px; padding: 10px; color: white">Hex: #94a3b8</div>
-<div style="background-color: #64748b; width: 150px; padding: 10px; color: white">Hex: #64748b</div>
-<div style="background-color: #7e858e; width: 150px; padding: 10px; color: white">Hex: #7e858e</div>
+<div style="background-color: #9796f0; width: 150px; padding: 10px; color: black">Hex: #9796f0</div>
+<div style="background-color: #fbc7d4; width: 150px; padding: 10px; color: black">Hex: #fbc7d4</div>
+<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
+<div style="background-color: #171f46; width: 150px; padding: 10px; color: white">Hex: #171f46</div>
+<div style="background-color: #8b5cf6; width: 150px; padding: 10px; color: black">Hex: #8b5cf6</div>
+<div style="background-color: #b5b7c4; width: 150px; padding: 10px; color: black">Hex: #b5b7c4</div>
+<div style="background-color: #9897f0; width: 150px; padding: 10px; color: black">Hex: #9897f0</div>
 
 </details>
 
