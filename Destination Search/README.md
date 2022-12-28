@@ -1,6 +1,6 @@
 In this project, I build a **Destination Search** app by applying the concepts class components,functional components.
 
-Live Link: https://venkatdestiny.ccbp.tech/
+# Live Link: https://venkatdestiny.ccbp.tech/
 
 ### Refer to the image below:
 
